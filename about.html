@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+           <link rel="shortcut icon" href="download/logo.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="download/logo.png" type="image/x-icon" />
+      <title>About | New Earth Farm</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+
+      <style>
+         /* Base Styles */
+:root {
+   --primary-color: #2a7221;
+   --secondary-color: #4a9c3d;
+   --accent-color: #f8a51b;
+   --light-color: #f9f9f9;
+   --dark-color: #333;
+   --text-color: #555;
+}
+
+body {
+   font-family: 'Open Sans', sans-serif;
+   color: var(--text-color);
+   line-height: 1.6;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+/* Section Header Styles */
+.section-header {
+   text-align: center;
+   margin-bottom: 50px;
+}
+
+.section-title {
+   font-size: 2.5rem;
+   color: var(--primary-color);
+   margin-bottom: 15px;
+   font-weight: 700;
+   position: relative;
+   display: inline-block;
+}
+
+.title-decoration {
+   position: relative;
+   height: 30px;
+}
+
+.leaf-icon {
+   color: var(--accent-color);
+   font-size: 1.8rem;
+   position: relative;
+   z-index: 1;
+   background: white;
+   padding: 0 15px;
+}
+
+.title-decoration::before {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 0;
+   right: 0;
+   height: 2px;
+   background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+   z-index: 0;
+}
+
+/* Story Section */
+.story-section {
+   padding: 80px 0;
+   background-color: var(--light-color);
+}
+
+.story-content {
+   display: flex;
+   align-items: center;
+   gap: 40px;
+}
+
+.story-image {
+   flex: 1;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.story-image img {
+   width: 100%;
+   height: auto;
+   display: block;
+   transition: transform 0.5s ease;
+}
+
+.story-image:hover img {
+   transform: scale(1.03);
+}
+
+.story-text {
+   flex: 1;
+   padding: 20px;
+}
+
+.story-text p {
+   margin-bottom: 20px;
+   font-size: 1.1rem;
+}
+
+.founder-quote {
+   margin-top: 30px;
+   padding: 20px;
+   background-color: white;
+   border-left: 4px solid var(--accent-color);
+   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+   border-radius: 0 8px 8px 0;
+}
+
+.founder-quote blockquote {
+   font-style: italic;
+   color: var(--dark-color);
+   margin: 0;
+}
+
+.founder-quote cite {
+   display: block;
+   margin-top: 10px;
+   font-style: normal;
+   font-weight: 600;
+   color: var(--primary-color);
+}
+
+/* Values Section */
+.values-section {
+   padding: 80px 0;
+   background-color: white;
+}
+
+.values-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 30px;
+}
+
+.value-card {
+   text-align: center;
+   padding: 30px 20px;
+   background-color: var(--light-color);
+   border-radius: 8px;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.value-icon {
+   width: 80px;
+   height: 80px;
+   margin: 0 auto 20px;
+   background-color: var(--primary-color);
+   color: white;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 2rem;
+   transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+   background-color: var(--accent-color);
+   transform: rotateY(180deg);
+}
+
+.value-card h3 {
+   color: var(--primary-color);
+   margin-bottom: 15px;
+   font-size: 1.4rem;
+}
+
+/* Offer Section */
+.offer-section {
+   padding: 80px 0;
+   background-color: var(--light-color);
+}
+
+.services-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 30px;
+}
+
+.service-card {
+   background: white;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+   transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+   transform: translateY(-10px);
+}
+
+.service-image {
+   height: 200px;
+   background-size: cover;
+   background-position: center;
+   position: relative;
+   display: flex;
+   align-items: flex-end;
+}
+
+.service-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.service-image h3 {
+   position: relative;
+   z-index: 1;
+   color: white;
+   margin: 0 0 20px 20px;
+   font-size: 1.6rem;
+   text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.service-content {
+   padding: 25px;
+}
+
+.service-content p {
+   margin-bottom: 20px;
+}
+
+.service-link {
+   color: var(--primary-color);
+   text-decoration: none;
+   font-weight: 600;
+   display: inline-flex;
+   align-items: center;
+}
+
+.service-link i {
+   margin-left: 5px;
+   transition: transform 0.3s ease;
+}
+
+.service-link:hover i {
+   transform: translateX(5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+   .story-content {
+      flex-direction: column;
+   }
+   
+   .section-title {
+      font-size: 2rem;
+   }
+   
+   .values-grid {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+@media (max-width: 480px) {
+   .values-grid {
+      grid-template-columns: 1fr;
+   }
+   
+   .services-grid {
+      grid-template-columns: 1fr;
+   }
+}
+         .section-title {
+            font-size: 1.8rem;
+         }
+      
+      </style>
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+
+
+            <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="index.html"><img height="50" width="50" src="download/logo.png" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item ">
+                                 <a class="nav-link" href="index.html"> Home  </a>
+                              </li>
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="about.html">About</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="products.html">Products </a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="contact.html">Contact</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+
+
+
+      <!-- Our Story Section -->
+<section class="story-section">
+   <div class="container">
+      <div class="section-header">
+         <h2 class="section-title">Our Story</h2>
+         <div class="title-decoration">
+            <span class="leaf-icon"><i class="fa fa-leaf"></i></span>
+         </div>
+      </div>
+      <div class="story-content">
+         <div class="story-image">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="New Earth Farm">
+         </div>
+         <div class="story-text">
+            <p>New Earth Farm was founded with a simple but powerful vision — to nourish people and communities through sustainable and ethical farming. From small beginnings, we have grown into a diverse farm specializing in poultry, fisheries, piggery, and crop cultivation.</p>
+            <p>Every product we offer is a reflection of our commitment to quality, care, and the environment. We believe in farming that respects the land while delivering exceptional products to our community.</p>
+            <div class="founder-quote">
+               <blockquote>
+                  "Farming is a profession of hope, and at New Earth Farm, we're planting seeds for a better tomorrow."
+                  <cite>- Farm Founder</cite>
+               </blockquote>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+<!-- Our Values Section -->
+<section class="values-section">
+   <div class="container">
+      <div class="section-header">
+         <h2 class="section-title">What We Stand For</h2>
+         <div class="title-decoration">
+            <span class="leaf-icon"><i class="fa fa-leaf"></i></span>
+         </div>
+      </div>
+      <div class="values-grid">
+         <div class="value-card">
+            <div class="value-icon">
+               <i class="fa fa-heart"></i>
+            </div>
+            <h3>Quality</h3>
+            <p>We prioritize the health and wellbeing of our animals and crops to deliver superior products that meet the highest standards.</p>
+         </div>
+         <div class="value-card">
+            <div class="value-icon">
+               <i class="fa fa-recycle"></i>
+            </div>
+            <h3>Sustainability</h3>
+            <p>We farm with respect for nature, implementing practices that ensure future generations can thrive on healthy land.</p>
+         </div>
+         <div class="value-card">
+            <div class="value-icon">
+               <i class="fa fa-star"></i>
+            </div>
+            <h3>Community</h3>
+            <p>Building strong relationships with our customers and supporting local communities is at the heart of what we do.</p>
+         </div>
+         <div class="value-card">
+            <div class="value-icon">
+               <i class="fa fa-cogs"></i>
+            </div>
+            <h3>Innovation</h3>
+            <p>We embrace modern, responsible farming techniques to enhance productivity while caring for our environment.</p>
+         </div>
+      </div>
+   </div>
+</section>
+
+<!-- What We Offer Section -->
+<section class="offer-section">
+   <div class="container">
+      <div class="section-header">
+         <h2 class="section-title">What We Offer</h2>
+         <div class="title-decoration">
+            <span class="leaf-icon"><i class="fa fa-leaf"></i></span>
+         </div>
+      </div>
+      <div class="services-grid">
+         <div class="service-card">
+            <div class="service-image" style="background-image: url('download/Poultry\ Farming.jpg');">
+               <div class="service-overlay"></div>
+               <h3>Poultry Farming</h3>
+            </div>
+            <div class="service-content">
+               <p>Healthy, well-cared-for birds raised for quality eggs and meat in free-range environments that prioritize animal welfare.</p>
+            </div>
+         </div>
+         <div class="service-card">
+            <div class="service-image" style="background-image: url('download/Fisheries.jpg');">
+               <div class="service-overlay"></div>
+               <h3>Fisheries</h3>
+            </div>
+            <div class="service-content">
+               <p>Fresh fish grown sustainably with attention to water quality and healthy breeding practices for premium aquaculture products.</p>
+            </div>
+         </div>
+         <div class="service-card">
+            <div class="service-image" style="background-image: url('download/Piggery.jpg');">
+               <div class="service-overlay"></div>
+               <h3>Piggery</h3>
+            </div>
+            <div class="service-content">
+               <p>Carefully managed pigs raised for premium pork production in clean, healthy environments with ethical treatment standards.</p>
+            </div>
+         </div>
+         <div class="service-card">
+            <div class="service-image" style="background-image: url('download/Crop\ Farming.jpg');">
+               <div class="service-overlay"></div>
+               <h3>Crop Farming</h3>
+            </div>
+            <div class="service-content">
+               <p>Nutritious crops grown with environmentally friendly methods, without compromising on quality or nutritional value.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+      
+ 
+<!-- about -->
+<div class="about">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="titlepage">
+               <h2>People Say About Our Farm</h2>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            <div id="myCarousel" class="carousel slide about_Carousel" data-ride="carousel">
+               <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="test_box">
+                                    <i><img src="images/tes1.png" alt="#"/></i>
+                                    <h4>John Doe</h4>
+                                    <p>“I’ve been buying eggs and fresh catfish from this farm for over a year. The quality is unbeatable and the service is outstanding. I highly recommend them to anyone who values fresh produce!”</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="test_box">
+                                    <i><img src="images/tes1.png" alt="#"/></i>
+                                    <h4>Mary Smith</h4>
+                                    <p>“Their pigs are raised with so much care, you can taste the difference in the pork cuts. It's wonderful to support a farm that focuses on sustainable and healthy farming practices.”</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="test_box">
+                                    <i><img src="images/tes1.png" alt="#"/></i>
+                                    <h4>Michael Brown</h4>
+                                    <p>“From cassava to tomatoes, every crop I've purchased from this farm has been fresh, healthy, and full of flavor. Truly one of the best farms I've ever partnered with for my restaurant supply.”</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- end about -->
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <!--  footer -->
+      <footer id="contact">
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="titlepage">
+                        <h2>Contact Us</h2>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <form id="request" class="main_form">
+                        <div class="row">
+                           <div class="col-md-3 ">
+                              <input class="contactus" placeholder="Full Name" type="type" name="Full Name"> 
+                           </div>
+                           <div class="col-md-3">
+                              <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                           </div>
+                           <div class="col-md-3">
+                              <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
+                           </div>
+                           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                              <ul class="social_icon">
+                                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                              </ul>
+                           </div>
+                           <div class="col-md-8">
+                              <textarea class="contactus1" placeholder="Message" type="type" Message="Name">Message </textarea>
+                           </div>
+                           <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                              <button class="send_btn">Send</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="col-md-6 border_right">
+                     <ul class="location_icon">
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Locatins</li>
+                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a> +71 9087654321</li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>demo@gmail.com</li>
+                     </ul>
+                  </div>
+                  <div class="col-md-6 border_right">
+                     <h3>Menus</h3>
+                     <ul class="link">
+<li><a href="index.html">Home</a></li>                             
+<li><a href="about.html">About</a></li>                                                     
+<li><a href="products.html">Products</a></li>                             
+<li><a href="contact.html">Contact</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>Designed By <a href="https://princejetro.vercel.app"> PrinceJetro</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>

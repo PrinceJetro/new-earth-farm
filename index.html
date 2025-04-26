@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+    <link rel="shortcut icon" href="download/logo.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="download/logo.png" type="image/x-icon" />
+     <title>New Earth Farm</title>
+      <meta name="keywords" content="New Earth Farm, organic farming, fresh vegetables, natural produce, sustainable agriculture, healthy food, farm produce, eco-friendly farming, local farm products">
+      <meta name="description" content="New Earth Farm offers fresh, organic, and sustainably grown produce. Bringing healthy food straight from our farm to your table. Discover nature's goodness today.">
+      <meta name="author" content="New Earth Farm">
+
+      <!-- Open Graph Meta (for better link sharing on Facebook, WhatsApp, LinkedIn) -->
+      <meta property="og:title" content="New Earth Farm - Fresh Organic Produce">
+      <meta property="og:description" content="Experience the best of organic farming with New Earth Farm. Fresh, healthy, and eco-friendly produce delivered to you.">
+      <meta property="og:image" content="URL_TO_YOUR_FARM_LOGO_OR_BANNER_IMAGE"> <!-- Replace with actual image URL -->
+      <meta property="og:url" content="https://newearthfarm.com"> <!-- Replace with the real website URL -->
+      <meta property="og:type" content="website">
+
+      <!-- Twitter Card Meta (for sharing on Twitter) -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="New Earth Farm - Fresh Organic Produce">
+      <meta name="twitter:description" content="Shop fresh and organic produce at New Earth Farm. Your trusted source for healthy, sustainable food.">
+      <meta name="twitter:image" content="URL_TO_YOUR_FARM_LOGO_OR_BANNER_IMAGE"> <!-- Replace with actual image URL -->
+
+      <!-- SEO / Robots -->
+      <meta name="robots" content="index, follow">
+
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <style>
+         /* Products Showcase */
+.products-showcase {
+  padding: 80px 0;
+  background: white;
+}
+
+.product-categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.category-btn {
+  padding: 10px 20px;
+  background: none;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover, .category-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  background: white;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-image {
+  height: 200px;
+  position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--accent-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-name {
+  color: var(--primary-color);
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+}
+
+.product-description {
+  color: var(--text-color);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.product-details .detail {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--primary-color);
+}
+
+.product-details i {
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-categories {
+    gap: 5px;
+  }
+  
+  .category-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+      </style>
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="index.html"><img height="50" width="50" src="download/logo.png" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="index.html"> Home  </a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="about.html">About</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="products.html">Products </a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="contact.html">Contact</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- banner -->
+       <section class="banner_main">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="text-bg">
+               <h1>NEW EARTH FARM</h1>
+               <p>At New Earth Farm, we are committed to nurturing nature’s bounty through sustainable poultry, fisheries, piggery, and crop farming. We blend tradition with innovation to bring you healthy livestock and fresh farm produce, straight from our fields to your table.</p>
+               <a href="#">Discover More</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+      <!-- end banner -->
+      <!-- three_box -->
+      <div class="three_box">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="box_text">
+                     <figure><img src="download/pig.jpg" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="box_text">
+                     <figure><img src="download/chicken.jpg" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="box_text">
+                     <figure><img src="download/fish.jpg" alt="#"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- three_box -->
+      <!-- hottest -->
+<div class="hottest">
+   <div class="container">
+      <div class="row d_flex">
+         <div class="col-md-5">
+            <div class="titlepage">
+               <h2>Passion for Farming <br>Excellence in Every Field</h2>
+            </div>
+         </div>
+         <div class="col-md-7">
+            <div class="hottest_box">
+               <p>At New Earth Farm, every seed we plant, every animal we raise, and every fish we harvest reflects our deep passion for quality farming. We pride ourselves on delivering healthy poultry, fresh fish, premium pork, and bountiful crops — grown with care, dedication, and respect for the land.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+      </div>
+      </div>
+      <!-- end hottest -->
+      <!-- choose  section -->
+      <div class="choose">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-8">
+            <div class="titlepage">
+               <h2>Why Choose Us?</h2>
+               <p>At New Earth Farm, we combine modern farming practices with a deep respect for tradition, ensuring that you receive only the best poultry, fish, pork, and crops — fresh, healthy, and sustainably produced.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container-fluid">
+      <div class="row d_flex">
+         <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+            <div class="padding_with">
+               <div class="row">
+                  <div class="col-md-6 padding_bottom">
+                     <div class="choose_box">
+                        <i><img src="images/icon1.png" alt="#"/></i>
+                        <div class="choose_text">
+                           <h3>Quality Livestock</h3>
+                           <p>Our poultry, pigs, and fish are raised with the utmost care, ensuring healthy animals and premium-quality products for your table.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 padding_bottom">
+                     <div class="choose_box">
+                        <i><img src="images/icon2.png" alt="#"/></i>
+                        <div class="choose_text">
+                           <h3>Fresh Farm Produce</h3>
+                           <p>We grow a variety of crops with natural farming methods, delivering fresh, nutritious produce straight from our fields.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 padding_bottom2">
+                     <div class="choose_box">
+                        <i><img src="images/icon3.png" alt="#"/></i>
+                        <div class="choose_text">
+                           <h3>Sustainably Grown</h3>
+                           <p>We are committed to sustainable practices that protect the environment while promoting healthy farming for future generations.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="choose_box">
+                        <i><img src="images/icon4.png" alt="#"/></i>
+                        <div class="choose_text">
+                           <h3>Trusted Expertise</h3>
+                           <p>With years of experience in agriculture and livestock management, we deliver consistent excellence you can trust.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+            <div class="choose_img">
+               <figure><img src="images/food.jpg" alt="#"/></figure>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-5">
+            <a class="read_more" href="#">Read More</a>
+         </div>
+      </div>
+   </div>
+</div>
+
+      </div>
+      <!-- end choose  section -->
+
+          <!-- product  section -->
+    <!-- Products Showcase Section -->
+    <section class="products-showcase">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Farm Products</h2>
+          <div class="title-decoration">
+            <span class="leaf-icon"><i class="fa fa-leaf"></i></span>
+          </div>
+          <p class="section-subtitle">Grown with care, harvested with pride</p>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid">
+          <!-- Poultry Products -->
+          <div class="product-card" data-category="poultry">
+            <div class="product-image">
+              <img src="download/eggs.jpg" alt="Free-Range Eggs" />
+              <div class="product-badge">Farm Fresh</div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Free-Range Eggs</h3>
+              <p class="product-description">
+                Brown and white eggs from happy, pasture-raised hens
+              </p>
+              <div class="product-details">
+                <span class="detail"
+                  ><i class="fa fa-weight"></i> 30-count trays</span
+                >
+                <span class="detail"
+                  ><i class="fa fa-calendar-alt"></i> Collected daily</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="poultry">
+            <div class="product-image">
+              <img src="download/Whole Chickens.jpg" alt="Whole Chicken" />
+              <div class="product-badge">Pasture Raised</div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Whole Chickens</h3>
+              <p class="product-description">
+                Plump 3-4 lb birds raised without antibiotics
+              </p>
+              <div class="product-details">
+                <span class="detail"
+                  ><i class="fa fa-weight"></i> 3-4 lbs each</span
+                >
+                <span class="detail"
+                  ><i class="fa fa-utensils"></i> Perfect for roasting</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Fisheries Products -->
+          <div class="product-card" data-category="fisheries">
+            <div class="product-image">
+              <img src="download/Fresh Tilapia.jpg" alt="Fresh Tilapia" />
+              <div class="product-badge">Sustainable</div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Fresh Tilapia</h3>
+              <p class="product-description">
+                Mild-flavored fish grown in clean, freshwater ponds
+              </p>
+              <div class="product-details">
+                <span class="detail"
+                  ><i class="fa fa-weight"></i> 1-1.5 lbs each</span
+                >
+                <span class="detail"
+                  ><i class="fa fa-water"></i> Aquaculture raised</span
+                >
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+    <!-- end product  section -->
+
+
+<!-- about -->
+<div class="about">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+            <div class="titlepage">
+               <h2>People Say About Our Farm</h2>
+            </div>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12">
+            <div id="myCarousel" class="carousel slide about_Carousel" data-ride="carousel">
+               <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+               </ol>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="test_box">
+                                    <i><img src="images/tes1.png" alt="#"/></i>
+                                    <h4>John Doe</h4>
+                                    <p>“I’ve been buying eggs and fresh catfish from this farm for over a year. The quality is unbeatable and the service is outstanding. I highly recommend them to anyone who values fresh produce!”</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="test_box">
+                                    <i><img src="images/tes1.png" alt="#"/></i>
+                                    <h4>Mary Smith</h4>
+                                    <p>“Their pigs are raised with so much care, you can taste the difference in the pork cuts. It's wonderful to support a farm that focuses on sustainable and healthy farming practices.”</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="container">
+                        <div class="carousel-caption">
+                           <div class="row">
+                              <div class="col-md-12">
+                                 <div class="test_box">
+                                    <i><img src="images/tes1.png" alt="#"/></i>
+                                    <h4>Michael Brown</h4>
+                                    <p>“From cassava to tomatoes, every crop I've purchased from this farm has been fresh, healthy, and full of flavor. Truly one of the best farms I've ever partnered with for my restaurant supply.”</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+               </a>
+               <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- end about -->
+
+      </div>
+      <!--  footer -->
+      <footer id="contact">
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="titlepage">
+                        <h2>Contact Us</h2>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <form id="request" class="main_form">
+                        <div class="row">
+                           <div class="col-md-3 ">
+                              <input class="contactus" placeholder="Full Name" type="type" name="Full Name"> 
+                           </div>
+                           <div class="col-md-3">
+                              <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                           </div>
+                           <div class="col-md-3">
+                              <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
+                           </div>
+                           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                              <ul class="social_icon">
+                                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                              </ul>
+                           </div>
+                           <div class="col-md-8">
+                              <textarea class="contactus1" placeholder="Message" type="type" Message="Name">Message </textarea>
+                           </div>
+                           <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                              <button class="send_btn">Send</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="col-md-6 border_right">
+                     <ul class="location_icon">
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a> Locatins</li>
+                        <li><a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i></a> +71 9087654321</li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>demo@gmail.com</li>
+                     </ul>
+                  </div>
+                  <div class="col-md-6 border_right">
+                     <h3>Menus</h3>
+                     <ul class="link">
+<li><a href="index.html">Home</a></li>                             
+<li><a href="about.html">About</a></li>                                                     
+<li><a href="products.html">Products</a></li>                             
+<li><a href="contact.html">Contact</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>Designed By <a href="https://princejetro.vercel.app"> PrinceJetro</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+</html>
+
