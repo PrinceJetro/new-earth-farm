@@ -1012,3 +1012,169 @@ ul.link li a::after {
 .test_box img {
   border-radius: 50%;
 }
+
+/* Section Styles */
+.farm-tour-section {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.farm-tour-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%234a7c59" fill-opacity="0.03" width="50" height="50" x="0" y="0"></rect><rect fill="%234a7c59" fill-opacity="0.03" width="50" height="50" x="50" y="50"></rect></svg>');
+  z-index: 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* Gallery Styles */
+.farm-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  grid-gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  aspect-ratio: 4/3;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item.wide {
+  grid-column: span 2;
+}
+
+.gallery-item.tall {
+  grid-row: span 2;
+}
+
+.gallery-item.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.05);
+}
+
+.img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  padding: 1.5rem 1rem 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .img-caption {
+  transform: translateY(0);
+}
+
+.caption-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .farm-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .gallery-item.wide,
+  .gallery-item.large {
+    grid-column: span 1;
+  }
+
+  .gallery-item.tall {
+    grid-row: span 1;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* Decorative Elements */
+.barn-icon {
+  position: absolute;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.barn-icon-1 {
+  top: 10%;
+  left: 5%;
+  width: 100px;
+  height: 100px;
+}
+
+.barn-icon-2 {
+  bottom: 10%;
+  right: 5%;
+  width: 120px;
+  height: 120px;
+}
